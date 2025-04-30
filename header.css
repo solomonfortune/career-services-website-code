@@ -1,0 +1,85 @@
+header {
+  background-color: #ffffff;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo i {
+  font-size: 2.5em;
+  color: #007acc;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo .highlight {
+  color: #007acc;
+  margin-left: 5px;
+}
+
+nav {
+  margin-top: 15px;
+  padding: 10px 0;
+  background-color: #ffffff; /* Changed from #f8f9fa to #blue*/
+  border-radius: 5px;
+}
+
+nav a {
+  margin: 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative; /* Added for pseudo-element positioning */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #007acc;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+nav a:hover {
+  color: #007acc;
+  background-color: #e3f2fd;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+nav a.active {
+  color: #007acc;
+  background-color: #e3f2fd;
+}
+
+nav a.active::after {
+  width: 80%;
+}
+
+nav span.separator {
+  color: #ddd;
+  margin: 0 5px;
+}
